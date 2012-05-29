@@ -1,0 +1,16 @@
+.newLaw_bar{position:fixed; left:0; display:none; background:#000; width:100%; padding:5px; color:#fff; font-size:12px; font-family:Arial, Helvetica, sans-serif} 
+.newLaw_bar a{color:#CCC; border-bottom:1px solid #CCC; text-decoration:none}
+.newLaw_bar a:hover{color:#CCC; border-bottom:1px solid #F00}
+.newLaw_bar a.accept{position:absolute; top:2px; right:15px; background-color:#FF0; border-bottom:none; color:#000; text-decoration:none; text-transform:capitalize; padding:3px 10px;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+transition: background-color .5s;
+-moz-transition: background-color .5s; /* Firefox 4 */
+-webkit-transition: background-color .5s; /* Safari and Chrome */
+-o-transition: background-color .5s; /* Opera */}
+.newLaw_bar a.accept:hover{background-color:#0F0; border-bottom:none;
+transition: background-color .5s;
+-moz-transition: background-color .5s; /* Firefox 4 */
+-webkit-transition: background-color .5s; /* Safari and Chrome */
+-o-transition: background-color .5s; /* Opera */}

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>New Law</title>
+
+<style>
+	#idCenter{text-align:center}
+	#idPage{text-align:left; margin:0 auto; width:900px}
+	#idNavigation{width:200px; float:left; border:1px solid #CCC; padding:20px}
+	#idMain{width:600px; float:right; border:1px solid #CCC; padding:20px}
+	
+	@media (max-width:400px) {
+		body{padding:0; margin:0}
+		#idPage{text-align:left; margin:0 auto; width:100%}	
+		#idNavigation{width:auto; float:none; padding:10px}
+		#idMain{width:auto; float:none; padding:10px}
+	}
+</style>
+<link rel="stylesheet" type="text/css" href="jquery.new-law.css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.new-law.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('body').newLaw({'location':'top'});
+	});
+</script>
+</head>
+
+<body>
+
+<div id="idCenter">
+	<div id="idPage">
+		<div id="idNavigation">
+			<h3>Navigation</h3>
+			<ul>
+				<li><a href="http://www.davidslack.co.uk/project/jquery-mobile-menu-created-dave-slack">Mobile menu home</a></li>	
+				<li><a href="https://github.com/">Mobile menu on Git hub</a></li>
+				<li><a href="http://www.davidslack.co.uk/">David Slack home</a></li>
+				<li><a class="clActive" href="demo.html">This page</a></li>			
+			</ul>		
+		</div>
+		<div id="idMain">
+			<h2>New Law demo</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper mollis risus, eu laoreet leo posuere sit amet. Proin sed odio ut orci placerat consequat a imperdiet velit. Morbi ornare, est sed blandit dapibus, arcu elit pellentesque diam, vitae lobortis nulla sapien non massa. Donec sed ligula nec quam porttitor suscipit eu ac tellus. Cras vulputate tempor sapien non interdum. Proin enim lacus, tempor vitae tincidunt eget, rhoncus nec ipsum. Nullam ultricies hendrerit sapien, ut tempor enim sagittis quis. Suspendisse potenti.</p>
+			<p>Donec gravida ligula vel odio rutrum eget vehicula justo egestas. Aliquam erat volutpat. Vestibulum pulvinar velit quis ipsum condimentum dictum. Sed pretium neque magna. Mauris varius, eros sit amet sagittis ultrices, orci ligula imperdiet enim, eu pellentesque enim quam vitae lectus. Mauris auctor enim vel ante elementum commodo. Curabitur egestas nisl at libero rutrum et congue tellus rhoncus. Nulla non ligula ipsum, eu rutrum turpis. Nunc interdum dignissim lacus ut vehicula. Morbi mattis tellus sed massa pretium feugiat. Nullam rhoncus fermentum magna, tempor iaculis risus ultricies quis. Integer molestie eros id ligula suscipit sed facilisis mi faucibus.</p>
+			<p>Vestibulum et augue risus, et cursus enim. Morbi pretium erat nisl. In hac habitasse platea dictumst. Aenean gravida, nibh ut mollis blandit, mi sem feugiat risus, non consectetur diam massa ac nibh. Phasellus elementum lectus a ipsum rutrum malesuada sed eu felis. Aenean volutpat egestas elementum. Aenean fermentum malesuada justo, sit amet venenatis elit egestas vel.</p>
+			<p>Suspendisse tristique imperdiet interdum. Vivamus volutpat, urna adipiscing imperdiet sagittis, lacus ipsum blandit risus, ut dapibus nisi leo accumsan nulla. Vestibulum fermentum, tellus at placerat scelerisque, lectus magna dapibus dui, sit amet vulputate diam arcu sed tortor. Integer vitae lacus quis enim ultricies imperdiet sed non mi. Curabitur venenatis lorem vel leo laoreet fermentum. Nunc placerat rhoncus quam convallis rhoncus. In erat massa, commodo eu facilisis sed, tincidunt id justo. Morbi bibendum malesuada varius. Donec tincidunt nisl id leo tristique sed placerat felis malesuada. Nulla facilisi. Vestibulum vehicula, magna eu sollicitudin euismod, odio lorem elementum mauris, a feugiat lorem turpis eu quam. Mauris placerat magna sit amet lorem faucibus commodo. Mauris pulvinar fringilla aliquam. Nunc mi libero, sollicitudin quis tristique vitae, facilisis a odio. Duis hendrerit scelerisque metus at pharetra.</p>
+			<p>Cras vel est tellus. Nulla sagittis ornare ante eget accumsan. Donec malesuada felis a libero placerat ultricies. Aliquam faucibus velit vel erat vestibulum suscipit vel ac lacus. Nulla ullamcorper arcu sit amet diam adipiscing scelerisque. Cras sed pharetra sem. Maecenas lacinia nulla in sapien iaculis dictum. Quisque lectus turpis, imperdiet quis iaculis in, gravida eget ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer eget quam in urna laoreet eleifend. Pellentesque suscipit ante sed eros mattis sagittis. Cras est odio, tincidunt et adipiscing sit amet, tincidunt nec massa. Nulla facilisi. Morbi malesuada mattis tortor, nec hendrerit risus luctus sit amet. Nulla rhoncus aliquam vestibulum.</p>  
+		</div>
+	</div>
+</div>
+</body>
+</html>
