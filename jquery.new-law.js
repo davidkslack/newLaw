@@ -65,14 +65,16 @@
 			var defaults =
 			{
 				'location' 			: 'bottom',
-				'policyLink' 		: '/content/privacy#cookie'
+				'policyLink' 		: '/content/privacy#cookie',
+				'timer'				: true,
+				'timerMiliseconds'	: 8000
 			};			
 			var options = $.extend(defaults, options);
 			
 		// Create teh bar to add
 			var newLaw_bar = $('<div class="newLaw_bar">')
 				.html('By using this website you agree to our <a href="' + options.policyLink + '" title="See more information on our cookie policy">cookie policy</a>')
-				.append('<a class="accept" href="#">accept</a>');
+				.append('<a class="accept" href="#">Close</a>');
 		
 		// Make sure we put a bar on each element only if the cookie isn't set
 			newLaw_getCookieValue = newLaw_getCookie('newLaw_cookie');
@@ -104,9 +106,12 @@
 							newLaw_setCookie();
 							return false;
 						});
-						
+					
+					if(options.timer != true)
+					{
 					// Click accept after 5 seconds
-						setTimeout("$('.newLaw_bar a.accept').click();",8000);
+						setTimeout("$('.newLaw_bar a.accept').click();", options.timerMiliseconds);
+					}
 				});
 			}		
 	};
