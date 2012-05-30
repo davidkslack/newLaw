@@ -24,10 +24,14 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('body').newLaw({
-			location 			: 'top',
-			policyLink			: '/content/privacy#cookie',
-			timer				: true,
-			timerMiliseconds	: 5000	
+				location 			: 'bottom', // Where the bar is located 'top' or 'bottom'
+				policyLink			: '/content/privacy#cookie', // Link to the cookie law policy eg '/content/privacy#cookie'
+				timer				: true, // Should we have a timer on the bar
+				timerMiliseconds	: 8000, // How long should the timer last
+				cookieLasts			: 396, // How long should the timer last
+				barText				: 'By using this website you agree to our ', // NB there is a space at the end
+				policyLinkTitle		: 'See more information on our cookie policy', // Title used on the policy link
+				barCloseText		: 'Close' // Button to get rid of the bar
 		});
 	});
 </script>
@@ -48,6 +52,7 @@
 		</div>
 		<div id="idMain">
 			<h2>New Law demo</h2>
+			<h3>NB. This demo will not work if you do not allow cookies ie on your local drive</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper mollis risus, eu laoreet leo posuere sit amet. Proin sed odio ut orci placerat consequat a imperdiet velit. Morbi ornare, est sed blandit dapibus, arcu elit pellentesque diam, vitae lobortis nulla sapien non massa. Donec sed ligula nec quam porttitor suscipit eu ac tellus. Cras vulputate tempor sapien non interdum. Proin enim lacus, tempor vitae tincidunt eget, rhoncus nec ipsum. Nullam ultricies hendrerit sapien, ut tempor enim sagittis quis. Suspendisse potenti.</p>
 			<p>Donec gravida ligula vel odio rutrum eget vehicula justo egestas. Aliquam erat volutpat. Vestibulum pulvinar velit quis ipsum condimentum dictum. Sed pretium neque magna. Mauris varius, eros sit amet sagittis ultrices, orci ligula imperdiet enim, eu pellentesque enim quam vitae lectus. Mauris auctor enim vel ante elementum commodo. Curabitur egestas nisl at libero rutrum et congue tellus rhoncus. Nulla non ligula ipsum, eu rutrum turpis. Nunc interdum dignissim lacus ut vehicula. Morbi mattis tellus sed massa pretium feugiat. Nullam rhoncus fermentum magna, tempor iaculis risus ultricies quis. Integer molestie eros id ligula suscipit sed facilisis mi faucibus.</p>
 			<p>Vestibulum et augue risus, et cursus enim. Morbi pretium erat nisl. In hac habitasse platea dictumst. Aenean gravida, nibh ut mollis blandit, mi sem feugiat risus, non consectetur diam massa ac nibh. Phasellus elementum lectus a ipsum rutrum malesuada sed eu felis. Aenean volutpat egestas elementum. Aenean fermentum malesuada justo, sit amet venenatis elit egestas vel.</p>

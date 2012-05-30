@@ -1,7 +1,9 @@
 /**
- * Plugin to add a small bar at the bottom of the site with a link to the Cookie policy
+ * New Law
+ * -------
+ * Plugin to add a small bar at the bottom of the site with a link to the sites Cookie policy
  * The bar is only visible if the cookie is not set or set to false
- * The bar will retract after 30 seconds
+ * The bar will retract after 8 seconds
  * Once the bar has retracted an agreement cookie is set to true and the bar will not show again
  *
  * This plugin reqires jQuery 1.4 or higher
@@ -10,20 +12,40 @@
  *
  * To use simply add to the body like $('body').newLaw();
  * Options include
- * 'location' which is where the bar is located 'top' or 'bottom'
- * 'policyLink' which is the link to the cookie law policy eg '/content/privacy#cookie'
+ *		location 			: 'bottom', // Where the bar is located 'top' or 'bottom'
+ *		policyLink			: '/content/privacy#cookie', // Link to the cookie law policy eg '/content/privacy#cookie'
+ *		timer				: true, // Should we have a timer on the bar
+ *		timerMiliseconds	: 8000 // How long should the timer last
+ *		cookieLasts			: 396, // How long should the timer last
+ *		barText				: 'By using this website you agree to our ', // NB there is a space at the end
+ *		policyLinkTitle		: 'See more information on our cookie policy', // Title used on the policy link
+ *		barCloseText		: 'Close' // Button to get rid of the bar
  */
  
 (function($)
 {
 	$.fn.newLaw = function(options)
 	{
+		// Create the options to use
+			var defaults =
+			{
+				location 			: 'bottom', // Where the bar is located 'top' or 'bottom'
+				policyLink			: '/content/privacy#cookie', // Link to the cookie law policy eg '/content/privacy#cookie'
+				timer				: true, // Should we have a timer on the bar
+				timerMiliseconds	: 8000, // How long should the timer last
+				cookieLasts			: 396, // How long should the timer last
+				barText				: 'By using this website you agree to our ', // NB there is a space at the end
+				policyLinkTitle		: 'See more information on our cookie policy', // Title used on the policy link
+				barCloseText		: 'Close' // Button to get rid of the bar
+			};			
+			var options = $.extend(defaults, options);
+			
 		// Set the cookie
 			function newLaw_setCookie()
 			{
 				var c_name = 'newLaw_cookie'
 				var value = 'true';
-				var exdays = 396;
+				var exdays = options.cookieLasts;
 				
 				var exdate=new Date();
 				exdate.setDate(exdate.getDate() + exdays);
@@ -57,24 +79,14 @@
 		// Fade the bar out
 			function newLaw_fadeOut()
 			{
-				//setTimeout("$('.newLaw_bar').fadeOut('slow');",5000);
 				$('.newLaw_bar').fadeOut('slow');
 			}
-		
-		// Create the options to use
-			var defaults =
-			{
-				location 			: 'bottom',
-				policyLink			: '/content/privacy#cookie',
-				timer				: true,
-				timerMiliseconds	: 2000
-			};			
-			var options = $.extend(defaults, options);
 			
 		// Create teh bar to add
 			var newLaw_bar = $('<div class="newLaw_bar">')
-				.html('By using this website you agree to our <a href="' + options.policyLink + '" title="See more information on our cookie policy">cookie policy</a>')
-				.append('<a class="accept" href="#">Close</a>');
+				.html(options.barText)
+				.append('<a href="' + options.policyLink + '" title="' + options.policyLinkTitle + '">cookie policy</a>')
+				.append('<a class="accept" href="#">' + options.barCloseText + '</a>');
 		
 		// Make sure we put a bar on each element only if the cookie isn't set
 			newLaw_getCookieValue = newLaw_getCookie('newLaw_cookie');
@@ -109,7 +121,7 @@
 					
 					if(options.timer == true)
 					{
-					// Click accept after 5 seconds
+					// Auto click accept after options.timerMiliseconds
 						setTimeout("$('.newLaw_bar a.accept').click();", options.timerMiliseconds);
 					}
 				});
