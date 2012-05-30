@@ -64,10 +64,10 @@
 		// Create the options to use
 			var defaults =
 			{
-				'location' 			: 'bottom',
-				'policyLink' 		: '/content/privacy#cookie',
-				'timer'				: true,
-				'timerMiliseconds'	: 8000
+				location 			: 'bottom',
+				policyLink			: '/content/privacy#cookie',
+				timer				: true,
+				timerMiliseconds	: 2000
 			};			
 			var options = $.extend(defaults, options);
 			
@@ -107,7 +107,7 @@
 							return false;
 						});
 					
-					if(options.timer != true)
+					if(options.timer == true)
 					{
 					// Click accept after 5 seconds
 						setTimeout("$('.newLaw_bar a.accept').click();", options.timerMiliseconds);
