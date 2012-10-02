@@ -15,11 +15,11 @@
  *		location 			: 'bottom', // Where the bar is located 'top' or 'bottom'
  *		policyLink			: '/content/privacy#cookie', // Link to the cookie law policy eg '/content/privacy#cookie'
  *		timer				: true, // Should we have a timer on the bar
- *		timerMiliseconds	: 8000 // How long should the timer last
- *		cookieLasts			: 396, // How long should the timer last
+ *		timerMiliseconds		: 8000 // How long should the timer last
+ *		cookieLasts			: 396, // After how many days the cookies will expire
  *		barText				: 'By using this website you agree to our ', // NB there is a space at the end
- *		policyLinkTitle		: 'See more information on our cookie policy', // Title used on the policy link
- *		barCloseText		: 'Close' // Button to get rid of the bar
+ *		policyLinkTitle			: 'See more information on our cookie policy', // Title used on the policy link
+ *		barCloseText			: 'Close' // Button to get rid of the bar
  */
  
 (function($)
